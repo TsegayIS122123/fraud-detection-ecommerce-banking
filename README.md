@@ -165,6 +165,52 @@ These insights confirm that the two domains require tailored approaches: richer 
 **Next Step:** Proceed to **Task 2 – Model Building and Training** (baseline + ensemble models).
 
 ---
+## 📊 **Task 2: Model Building - COMPLETED RESULTS**
+
+### **🎯 Objectives Achieved:**
+1. ✅ **Baseline Model**: Logistic Regression trained and evaluated
+2. ✅ **Ensemble Model**: Random Forest with hyperparameter optimization
+3. ✅ **Cross-Validation**: 5-fold stratified validation for reliable metrics
+4. ✅ **Hyperparameter Tuning**: Demonstrated tuning approach with improvement
+5. ✅ **Model Selection**: Best models selected with business justification
+
+### **📈 Key Performance Results:**
+
+#### **E-commerce Fraud Detection:**
+| Model | Accuracy | Precision | Recall | F1-Score | PR-AUC | Selection |
+|-------|----------|-----------|--------|----------|---------|-----------|
+| Logistic Regression | 68.83% | 18.45% | 68.09% | 29.03% | 0.2943 | Baseline |
+| Random Forest | 95.65% | 99.93% | 53.60% | 69.78% | 0.6176 | Good |
+| **Random Forest (Tuned)** | **95.65%** | **99.93%** | **53.60%** | **69.78%** | **0.6268** | **✅ BEST** |
+
+**Business Insight**: Random Forest makes only **1 false positive** vs 8,518 for Logistic Regression, making it 99.99% better for customer experience.
+
+#### **Credit Card Fraud Detection:**
+| Model | Accuracy | Precision | Recall | F1-Score | PR-AUC | Selection |
+|-------|----------|-----------|--------|----------|---------|-----------|
+| Logistic Regression | 97.30% | 5.18% | 87.37% | 9.79% | 0.5402 | Baseline |
+| **Random Forest** | **98.50%** | **9.00%** | **87.37%** | **16.32%** | **0.7163** | **✅ BEST** |
+
+**Business Insight**: Both models catch 87.37% of fraud, but Random Forest has fewer false positives (839 vs 1,518).
+
+### **🔧 Technical Implementation:**
+
+#### **Model Architecture:**
+```python
+# Random Forest for E-commerce
+RandomForestClassifier(
+    n_estimators=100,
+    max_depth=20,
+    class_weight='balanced',
+    random_state=42
+)
+
+# Logistic Regression Baseline
+LogisticRegression(
+    class_weight='balanced',
+    max_iter=1000,
+    random_state=42
+)
 
 
 
