@@ -212,6 +212,36 @@ LogisticRegression(
     random_state=42
 )
 
+# Task 3: Model Explainability - COMPLETED 
+
+## 📊 Results Summary
+
+### INSTRUCTION 1: Feature Importance Baseline
+- **E-commerce Top Features**: time_since_signup (23.2%), time_since_signup_days (17.7%), time_since_signup_hours (15.8%)
+- **Credit Card Top Features**: V14 (11.7%), V4 (11.4%), V12 (9.9%)
+- **Visualizations**: Feature importance plots saved in `reports/` folder
+
+### INSTRUCTION 2: Prediction Case Analysis
+- **True Positives**: Correctly identified fraud cases analyzed
+- **False Positives**: Legitimate transactions incorrectly flagged
+- **False Negatives**: Missed fraud cases examined
+- **Feature contributions**: Analyzed for each case type
+
+### INSTRUCTION 3: Model Interpretation
+- **Top 5 Drivers**: Identified for both models
+- **Impact Direction**: Analyzed whether features increase/decrease fraud risk
+- **Surprising Findings**: Documented counterintuitive patterns
+
+### INSTRUCTION 4: Business Recommendations
+- **E-commerce Recommendations**: 
+  1. Implement Time-Based Risk Scoring
+  2. 24/7 Fraud Monitoring
+  3. Continuous Model Improvement
+- **Credit Card Recommendations**: 
+  1. Focus on Key Indicators (V14)
+  2. 24/7 Fraud Monitoring
+  3. Continuous Model Improvement
+
 
 
 
